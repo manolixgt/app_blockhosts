@@ -7,7 +7,7 @@ logging.basicConfig()
 logging.getLogger('activar_hosts').setLevel(logging.DEBUG)
 #project dir
 
-PROJ_DIR="D:\\MyDesktop\\manolix\\biggtronic.com\\blockhosts"
+PROJ_DIR="D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts"
 
 #current time variable
 now = datetime.datetime.now()
@@ -25,27 +25,27 @@ def activar_hosts():
 #elevate(show_console=False)
     print('adding domains to host file')
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\blockhosts\\AddToHosts.ps1 -Hostname www.youtube.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname www.youtube.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\blockhosts\\AddToHosts.ps1 -Hostname www.juegosdechicas.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname www.juegosdechicas.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\blockhosts\\AddToHosts.ps1 -Hostname www.juegos.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname www.juegos.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\blockhosts\\AddToHosts.ps1 -Hostname amongusplay.online -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname amongusplay.online -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\blockhosts\\AddToHosts.ps1 -Hostname web.roblox.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname web.roblox.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()        
 
