@@ -17,38 +17,38 @@ newline = '\n'
 
 #open file to register task execution
 file1 = open(os.path.join(PROJ_DIR, 'log.log'),'a') 
-file1.write("blocked at "+str(now)+newline) 
+file1.write("unblocked at "+str(now)+newline) 
 file1.close()
 
 
-def activar_hosts():
+def desactivar_hosts():
 
     print('adding domains to host file')
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname www.youtube.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\RemoveFromHosts.ps1 -Hostname www.youtube.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname www.juegosdechicas.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\RemoveFromHosts.ps1 -Hostname www.juegosdechicas.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname www.juegos.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\RemoveFromHosts.ps1 -Hostname www.juegos.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname amongusplay.online -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\RemoveFromHosts.ps1 -Hostname amongusplay.online -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()
 
     p = subprocess.Popen(["powershell.exe", 
-                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname web.roblox.com -DesireIP 127.0.0.1"], 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\RemoveFromHosts.ps1 -Hostname web.roblox.com -DesireIP 127.0.0.1"], 
                 stdout=sys.stdout)
     p.communicate()        
 
 
 if __name__ == '__main__':
-    activar_hosts()
+    desactivar_hosts()
