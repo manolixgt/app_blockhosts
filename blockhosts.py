@@ -49,6 +49,16 @@ def activar_hosts():
                 stdout=sys.stdout)
     p.communicate()        
 
+    p = subprocess.Popen(["powershell.exe", 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname www.minijuegos.com -DesireIP 127.0.0.1"], 
+                stdout=sys.stdout)
+    p.communicate()        
+
+    p = subprocess.Popen(["powershell.exe", 
+                "D:\\MyDesktop\\manolix\\biggtronic.com\\app_blockhosts\\AddToHosts.ps1 -Hostname betrayal.io -DesireIP 127.0.0.1"], 
+                stdout=sys.stdout)
+    p.communicate()        
+
 
 if __name__ == '__main__':
     activar_hosts()
